@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './Canvas.scss';
 import Timeline from '../charts/Timeline';
 import Header from './Header';
+import Summary from './Summary';
 
 
 function Canvas() {
@@ -10,6 +11,9 @@ function Canvas() {
     <Container className="Canvas">
       <Row className="Header">
         <Col><Header /></Col>
+      </Row>
+      <Row className="Summary">
+        <Col><Summary /></Col>
       </Row>
       <Row className="Timeline">
         <Col><Timeline /></Col>

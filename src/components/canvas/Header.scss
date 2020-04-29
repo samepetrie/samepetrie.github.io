@@ -1,3 +1,12 @@
+.HeaderContainer {
+    top: 0;
+    height: 20%;
+    width: 100%;
+    position: fixed;
+    background-color: #F4F4F9;
+    z-index: 1;
+}
+
 .Header.row {
     align-items: center;
     color: #393D3F;
@@ -26,6 +35,7 @@
   }
   
   .ContactButton a {
+    font-weight: bold;
     color: white;
   }
   
@@ -41,6 +51,5 @@
   .Divider {
       background-color: #79A1B9;
       height: 4px;
-      margin-top: 10px;
       margin-left: -15px;
   }

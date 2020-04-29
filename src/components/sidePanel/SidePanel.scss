@@ -5,21 +5,6 @@
   color: white;
 }
 
-.ContactInfo.row {
-  min-height: 30%;
-}
-
-.ContactPhoto {
-  max-height: 150px;
-  border: 2px solid white;
-  margin: 10px;
-}
-
-.NavMenu {
-  min-height: 50%;
-  padding-top: 20px;
-}
-
 .Quote.row {
   position: relative;
   text-align: center;
@@ -32,8 +17,4 @@
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-a {
-  font-weight: bold;
 }
