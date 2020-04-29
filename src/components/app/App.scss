@@ -13,6 +13,21 @@
   }
 }
 
+#sidePanel {
+  background-color: #79A1B9;
+  height: 100%;
+  max-width: 280px;
+  min-width: 240px;
+}
+
+#canvas {
+  background-color: #F4F4F9;
+}
+
+.container-fluid, .row {
+  height: 100%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,0 +1,39 @@
+.SidePanel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+}
+
+.ContactInfo.row {
+  min-height: 30%;
+}
+
+.ContactPhoto {
+  max-height: 150px;
+  border: 2px solid white;
+  margin: 10px;
+}
+
+.NavMenu {
+  min-height: 50%;
+  padding-top: 20px;
+}
+
+.Quote.row {
+  position: relative;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  min-height: 10%;
+}
+
+.Quote.row p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+a {
+  font-weight: bold;
+}
