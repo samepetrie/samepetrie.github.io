@@ -1,0 +1,46 @@
+.Header.row {
+    align-items: center;
+    color: #393D3F;
+    cursor: default;
+}
+
+.Title h1 {
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+.Title h4 {
+    margin-top: -15px;
+    color: #393D3F;
+}
+
+.ContactButton {
+    float: right;
+    background-color: #393D3F;
+    color: white;
+    padding: 15px 24px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .ContactButton a {
+    color: white;
+  }
+  
+  .ContactButton a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .ContactButton:hover {
+    background-color: #79A1B9;
+  }
+
+  .Divider {
+      background-color: #79A1B9;
+      height: 4px;
+      margin-top: 10px;
+      margin-left: -15px;
+  }
