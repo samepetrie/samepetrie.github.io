@@ -8,7 +8,7 @@ import Summary from './Summary';
 
 function Canvas() {
   return (
-    <Container className="Canvas">
+    <Container fluid className="Canvas">
       <Row className="Header">
         <Col><Header /></Col>
       </Row>
