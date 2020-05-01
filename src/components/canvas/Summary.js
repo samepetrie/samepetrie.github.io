@@ -6,13 +6,12 @@ import './Summary.scss';
 const Summary = () => (
     <Container fluid>
         <Row>
-            <Col md={5} className="ContactPhoto">
+            <Col md={3} className="ContactPhoto">
                 <Image src={ContactPhoto} roundedCircle/>
             </Col>
-            <Col md={7}>
-                <p id="greeting">Hi there! I'm Sam.</p>
-                <p id="summary-text">I think all data has a story to tell.<br /><br />
-                    By aligning the pieces, a powerful new reality is revealed.<br /><br />
+            <Col md={9}>
+                <p id="greeting">Hi there! I'm Sam.</p><br />
+                <p id="summary-text">I think all data has a story to tell. By aligning the pieces, a powerful new reality is revealed.<br /><br />
                     I turn these stories into innovative products.
                 </p>
             </Col>

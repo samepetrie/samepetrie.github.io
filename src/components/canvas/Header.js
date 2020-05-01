@@ -15,11 +15,6 @@ const Header = () => (
                 </button>
             </Col>
         </Row>
-        <Row>
-            <Col md={10}>
-                <div className="Divider"></div>
-            </Col>
-        </Row>
     </Container>
 )
 

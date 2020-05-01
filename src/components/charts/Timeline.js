@@ -75,7 +75,7 @@ const Timeline = () => (
           }}
           width={800}
           >
-          <VictoryLabel x={15} y={40} text="Where I've been so far..." style={{fontFamily: "inherit",
+          <VictoryLabel x={15} y={40} text="My journey so far..." style={{fontFamily: "inherit",
               fontSize: 20}} />
           <VictoryLegend x={600} y={50}
             orientation="horizontal"

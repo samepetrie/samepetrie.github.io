@@ -1,33 +1,40 @@
+.HeaderContent {
+    align-items: center;
+}
+
 .Title h1 {
     font-size: 60px;
     font-weight: lighter;
+    color: white;
 }
 
 .Title h5 {
-    color: #393D3F;
+    color: white;
 }
 
 .ContactButton {
     float: right;
-    background-color: #393D3F;
-    color: white;
-    padding: 15px 24px;
+    background-color: white;
+    color: #79A1B9;
+    padding: 20px 30px;
     border: none;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
   }
   
   .ContactButton a {
     font-weight: bold;
-    color: white;
-  }
-  
-  .ContactButton a:hover {
-    color: white;
-    text-decoration: none;
+    color: #79A1B9;
   }
   
   .ContactButton:hover {
-    background-color: #79A1B9;
+    background-color: #FFDDD2;
+    color: #393D3F;
+  }
+
+  .ContactButton:hover a {
+    background-color: #FFDDD2;
+    color: #393D3F;
+    text-decoration: none;
   }
