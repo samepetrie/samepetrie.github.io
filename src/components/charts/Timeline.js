@@ -51,16 +51,18 @@ const work = [
 const edu = [{
   "category": 3,
   "role": "B.S. Computer Science",
-  "org": "Unviversity of North Carolina - Chapel Hill",
+  "org": "University of North Carolina - Chapel Hill",
   "start_date": new Date(2014, 6, 14),
   "end_date": new Date(2018, 5, 13)
 }]
 
 const Timeline = () => (
   <Container fluid>
-    <Row>
-      <Col md={10}>
+    <Row className="Section">
+      <Col md={2}>
         <h2 id="sectionTitle">SUMMARY</h2>
+      </Col>
+      <Col md={10}>
         <div className="Divider"></div>
       </Col>
     </Row>

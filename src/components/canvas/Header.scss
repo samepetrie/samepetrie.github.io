@@ -14,10 +14,12 @@
 
 .ContactButton {
     float: right;
-    background-color: white;
-    color: #79A1B9;
+    background-color: #FFDDD2;
+    background-image: linear-gradient(to bottom right, white, #FFDDD2);
+    color: #393D3F;
     padding: 20px 30px;
     border: none;
+    border-radius: 50px;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
@@ -25,11 +27,12 @@
   
   .ContactButton a {
     font-weight: bold;
-    color: #79A1B9;
+    color: #393D3F;
   }
   
   .ContactButton:hover {
     background-color: #FFDDD2;
+    background-image: none;
     color: #393D3F;
   }
 

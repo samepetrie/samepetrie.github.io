@@ -1,18 +1,18 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import './SidePanel.scss';
+import { Nav } from 'react-bootstrap'
 
-function SidePanel() {
-  return (
-    // change to be more like the containers and columns. this can be one container, 3 rows stacked vertically
-    <Container className="SidePanel">
-      <Row className="Quote">
-        <Col>
-          <p>"The only person you are destined to be is the person you decide to be."<br />- Ralph Waldo Emerson</p>
-        </Col>
-      </Row>
-    </Container>
-  );
-}
 
-export default SidePanel;
+// Be sure to include styles at some point, probably during your bootstraping
+
+const SidePanel = () => (
+  <Nav defaultActiveKey="" className="flex-column">
+    <Nav.Link href="/"><i class="material-icons">person</i>
+    <span>About</span></Nav.Link>
+    <Nav.Link eventKey="link-1"><i class="material-icons">equalizer</i><span>Summary</span></Nav.Link>
+    <Nav.Link eventKey="link-2"><i class="material-icons">school</i><span>Education</span></Nav.Link>
+    <Nav.Link eventKey="link-2"><i class="material-icons">work</i><span>Experience</span></Nav.Link>
+  </Nav>
+);
+
+export default SidePanel
