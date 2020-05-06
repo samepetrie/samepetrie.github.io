@@ -15,16 +15,16 @@ function Canvas() {
       <Row className="Header">
         <Col><Header /></Col>
       </Row>
-      <Row className="Summary">
+      <Row className="Summary" id="About">
         <Col><Summary /></Col>
       </Row>
-      <Row className="Timeline">
+      <Row className="Timeline" id="Summary">
         <Col><Timeline /></Col>
       </Row>
-      <Row className="Education">
+      <Row className="Education" id="Education">
         <Col><Education /></Col>
       </Row>
-      <Row className="Experience">
+      <Row className="Experience" id="Experience">
         <Col><Experience /></Col>
       </Row>
       <Row className="Footer">

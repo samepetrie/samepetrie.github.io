@@ -8,14 +8,24 @@
   justify-content: center;
 }
 
-.nav-link {
-  color: white;
+.nav-items {
+  padding-left: 0px;
 }
 
-.nav-link:hover {
+.nav-item {
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
   color: #79A1B9
 }
 
-.nav-link span {
+.nav-item span {
   padding-left: 30px;
+}
+
+.nav li {
+  list-style-type: none;
 }
