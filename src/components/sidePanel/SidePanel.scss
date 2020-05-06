@@ -1,19 +1,5 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
-.Quote.row {
-  position: relative;
-  text-align: center;
-  font-style: italic;
-  font-size: 13px;
-  min-height: 10%;
-}
-
-.Quote.row p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 .nav {
   display: flex;
   flex-direction: column;
@@ -26,6 +12,10 @@
   color: white;
 }
 
+.nav-link:hover {
+  color: #79A1B9
+}
+
 .nav-link span {
-  padding-left: 25px;
+  padding-left: 30px;
 }

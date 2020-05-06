@@ -6,9 +6,10 @@ import SidePanel from '../sidePanel/SidePanel';
 import Canvas from '../canvas/Canvas';
 
 function App() {
+
   return (
     // make a side panel container (with react js file) and a main container
-    <Container fluid>
+    <Container className="AppContainer" fluid>
       <Row>
         <Col md={3} id="sidePanel">
           <SidePanel />

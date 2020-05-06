@@ -14,8 +14,10 @@
 
 .ContactButton {
     float: right;
-    background-color: #FFDDD2;
+    margin-right: 20px;
+    background-color: white;
     background-image: linear-gradient(to bottom right, white, #FFDDD2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #393D3F;
     padding: 20px 30px;
     border: none;
@@ -23,21 +25,30 @@
     text-align: center;
     text-decoration: none;
     font-size: 20px;
+    -webkit-transition: background-color .4s ease;
+    -moz-transition: background-color .4s ease;
+    -o-transition: background-color .4s ease;
+    transition: background-color .4s ease;
   }
   
   .ContactButton a {
     font-weight: bold;
     color: #393D3F;
+    -webkit-transition: background-color .4s ease;
+    -moz-transition: background-color .4s ease;
+    -o-transition: background-color .4s ease;
+    transition: background-color .4s ease;
   }
   
   .ContactButton:hover {
     background-color: #FFDDD2;
     background-image: none;
     color: #393D3F;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   }
 
   .ContactButton:hover a {
-    background-color: #FFDDD2;
     color: #393D3F;
     text-decoration: none;
   }

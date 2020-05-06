@@ -77,9 +77,7 @@ const Timeline = () => (
           }}
           width={800}
           >
-          <VictoryLabel x={15} y={40} text="My journey so far..." style={{fontFamily: "inherit",
-              fontSize: 20}} />
-          <VictoryLegend x={600} y={50}
+          <VictoryLegend x={600} y={15}
             orientation="horizontal"
             gutter={20}
             style={{ title: {fontSize: 14} }}
@@ -110,7 +108,7 @@ const Timeline = () => (
           <VictoryBar
             scale={{ x: "linear", y: "time" }}
             horizontal
-            domain={{ y: [new Date(2014, 1, 1), new Date(2020, 1, 1)], x: [0, 4] }}
+            domain={{ y: [new Date(2014, 1, 1), new Date(2020, 1, 1)], x: [0, 3.5] }}
             data={work}
             style={{ 
               data: { 
