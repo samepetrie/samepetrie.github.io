@@ -1,16 +1,44 @@
 [
   {
-    "category": "Work",
-    "role": "Product Management Intern",
-    "org": "Premier, Inc.",
-    "start_date": "2016-05-18",
-    "end_date": "2016-08-18"
+    "category": 2,
+    "role": "Full Stack Web Devloper",
+    "org": "Renaissance Computing Institute",
+    "start_date": "2015-09-21",
+    "end_date": "2018-05-31"
   },
   {
-    "category": "Work",
+    "category": 1.5,
+    "role": "Product Management Intern",
+    "org": "Premier, Inc.",
+    "start_date": "2016-05-10",
+    "end_date": "2016-08-10"
+  },
+  {
+    "category": 1.5,
     "role": "Data Visualization and Analytics Intern",
     "org": "Visa",
-    "start_date": "2017-05-21",
-    "end_date": "2017-08-21"
+    "start_date": "2017-05-10",
+    "end_date": "2017-08-10"
+  },
+  {
+    "category": 1,
+    "role": "Entrepreneurship Leadership Research and Teaching Assistant",
+    "org": "Entrepreneurship Center at Kenan-Flagler Business School",
+    "start_date": "2017-01-01",
+    "end_date": "2018-06-21"
+  },
+  {
+    "category": 2,
+    "role": "Associate Business Analyst",
+    "org": "Premier, Inc.",
+    "start_date": "2018-07-09",
+    "end_date": "2020-01-03"
+  },
+  {
+    "category": 2,
+    "role": "Product Implementation Manager",
+    "org": "LeanTaaS",
+    "start_date": "2020-01-06",
+    "end_date": "2020-04-17"
   }
 ]

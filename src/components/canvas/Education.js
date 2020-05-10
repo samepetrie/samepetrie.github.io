@@ -13,7 +13,9 @@ const Education = () => (
         </Row>
         <Row>
             <Col>
-                <p>University of North Carolina at Chapel Hill</p><br />
+                <h2>University of North Carolina at Chapel Hill</h2>
+                <p>B.S. Computer Science</p>
+                <p>Double Minor in Entrepreneurship and Statistics and Analytics</p>
             </Col>
         </Row>
     </Container>

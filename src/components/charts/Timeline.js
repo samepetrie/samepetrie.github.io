@@ -2,51 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryTooltip, VictoryLegend, VictoryVoronoiContainer, VictoryLabel } from 'victory';
 import './Timeline.scss';
-
-const work = [
-  {
-    "category": 2,
-    "role": "Full Stack Web Devloper",
-    "org": "Renaissance Computing Institute",
-    "start_date": new Date(2015, 9, 21),
-    "end_date": new Date(2018, 5, 31)
-  },
-  {
-    "category": 1.5,
-    "role": "Product Management Intern",
-    "org": "Premier, Inc.",
-    "start_date": new Date(2016, 5, 10),
-    "end_date": new Date(2016, 8, 10)
-  },
-  {
-    "category": 1.5,
-    "role": "Data Visualization and Analytics Intern",
-    "org": "Visa",
-    "start_date": new Date(2017, 5, 10),
-    "end_date": new Date(2017, 8, 10)
-  },
-  {
-    "category": 1,
-    "role": "Entrepreneurship Leadership Research and Teaching Assistant",
-    "org": "Entrepreneurship Center at Kenan-Flagler Business School",
-    "start_date": new Date(2017, 1, 1),
-    "end_date": new Date(2018, 6, 21)
-  },
-  {
-    "category": 2,
-    "role": "Associate Business Analyst",
-    "org": "Premier, Inc.",
-    "start_date": new Date(2018, 7, 9),
-    "end_date": new Date(2020, 1, 3)
-  },
-  {
-    "category": 2,
-    "role": "Product Implementation Manager",
-    "org": "LeanTaaS",
-    "start_date": new Date(2020, 1, 6),
-    "end_date": new Date(2020, 4, 17)
-  }
-]
+import work from '../../data/Timeline.json'
 
 const edu = [{
   "category": 3,
@@ -122,8 +78,8 @@ const Timeline = () => (
             }}
             barWidth={20}
             x="category"
-            y="start_date"
-            y0="end_date"
+            y={(d) => new Date(d.start_date)}
+            y0={(d) => new Date(d.end_date)}
             labels={({ datum }) => `${datum.role} \n ${datum.org}`}
             labelComponent={ 
               <VictoryTooltip 
