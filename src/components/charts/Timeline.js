@@ -14,26 +14,27 @@ const edu = [{
 
 const Timeline = () => (
   <Container fluid>
-    <Row className="Section">
+    {/* <Row className="Section">
       <Col md={2}>
         <h2 id="sectionTitle">SUMMARY</h2>
       </Col>
       <Col md={10}>
         <div className="Divider"></div>
       </Col>
-    </Row>
+    </Row> */}
     <Row className="TimelineChart">
       <Col>
         <VictoryChart 
           containerComponent={<VictoryVoronoiContainer radius = {2}/>}
           style={{
             parent: {
-              background: "#FFFFFF"
+              background: "#FFFFFF",
+              borderRadius: "6px"
             }
           }}
-          width={800}
+          width={1000}
           >
-          <VictoryLegend x={600} y={15}
+          <VictoryLegend x={800} y={15}
             orientation="horizontal"
             gutter={20}
             style={{ title: {fontSize: 14} }}
@@ -76,7 +77,7 @@ const Timeline = () => (
                 fontFamily: "inherit"
               }
             }}
-            barWidth={20}
+            barWidth={15}
             x="category"
             y={(d) => new Date(d.start_date)}
             y0={(d) => new Date(d.end_date)}
@@ -106,7 +107,7 @@ const Timeline = () => (
             }}
             horizontal
             data={edu}
-            barWidth={20}
+            barWidth={15}
             x="category"
             y="start_date"
             y0="end_date"

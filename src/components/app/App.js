@@ -3,18 +3,26 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './App.scss';
 import SidePanel from '../sidePanel/SidePanel';
 import Canvas from '../canvas/Canvas';
+import Header from '../canvas/Header';
+
 
 function App() {
 
   return (
     // make a side panel container (with react js file) and a main container
     <Container className="AppContainer" fluid>
-      <Row>
-        <Col md={3} id="sidePanel">
+      <Row className="Header">
+        <Col><Header /></Col>
+      </Row>
+      <Row className="Canvas">
+        {/* <Col md={3} id="sidePanel">
           <SidePanel />
-        </Col>
+        </Col> */}
         <Col id="canvas">
           <Canvas />
+        </Col>
+        <Col id="sidePanel">
+          <SidePanel />
         </Col>
       </Row>
     </Container>

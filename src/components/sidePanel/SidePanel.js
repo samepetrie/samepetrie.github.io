@@ -1,69 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import './SidePanel.scss';
-import { Nav } from 'react-bootstrap';
-import { Link, animateScroll as scroll } from "react-scroll";
 
-export default class SidePanel extends Component {
-  scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+const SidePanel = () => (
+  <Container fluid>
+      <Row>
+          <Col className="titles">
+            <h1>Product Manager.</h1>
+            <h1>Data Analyst.</h1>
+            <h1>Enigmatologist.</h1>
+            <h5>Charlotte, NC</h5>
+          </Col>
+      </Row>
+      <Row>
+        <Col className="details">
+            <p>Hi! I'm Sam. Take a look around at my adventure so far, then get in touch to learn more!</p>
+        </Col>
+      </Row>
+      <Row className="justify-content-md-center align-middle">
+        <Col md="auto"><button id="detailContact">Contact Sam</button></Col>
+      </Row>
+  </Container>
+)
 
-  render() {
-    return (
-      <Nav className="flex-column" id="navbar">
-        <div className="nav-content">
-          <ul className="nav-items">
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="About"
-                spy={true}
-                smooth={true}
-                offset={-120}
-                duration={500}
-              >
-                <i class="material-icons">person</i><span>About</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="Summary"
-                spy={true}
-                smooth={true}
-                offset={-120}
-                duration={500}
-              >
-                <i class="material-icons">equalizer</i><span>Summary</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="Education"
-                spy={true}
-                smooth={true}
-                offset={-120}
-                duration={500}
-              >
-                <i class="material-icons">school</i><span>Education</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="Experience"
-                spy={true}
-                smooth={true}
-                offset={-120}
-                duration={500}
-              >
-                <i class="material-icons">work</i><span>Experience</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </Nav>
-    );
-  }
-}
+export default SidePanel

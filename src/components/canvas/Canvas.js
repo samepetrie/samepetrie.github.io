@@ -12,16 +12,16 @@ import Footer from './Footer';
 function Canvas() {
   return (
     <Container fluid className="Canvas">
-      <Row className="Header">
+      {/* <Row className="Header">
         <Col><Header /></Col>
-      </Row>
-      <Row className="Summary" id="About">
+      </Row> */}
+      {/* <Row className="Summary" id="About">
         <Col><Summary /></Col>
-      </Row>
+      </Row> */}
       <Row className="Timeline" id="Summary">
         <Col><Timeline /></Col>
       </Row>
-      <Row className="Education" id="Education">
+      {/* <Row className="Education" id="Education">
         <Col><Education /></Col>
       </Row>
       <Row className="Experience" id="Experience">
@@ -29,7 +29,7 @@ function Canvas() {
       </Row>
       <Row className="Footer">
         <Col><Footer /></Col>
-      </Row>
+      </Row> */}
     </Container>
   );
 }
