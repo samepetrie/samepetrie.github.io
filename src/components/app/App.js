@@ -4,46 +4,55 @@ import './App.scss';
 import SidePanel from '../sidePanel/SidePanel';
 import Canvas from '../canvas/Canvas';
 import Header from '../canvas/Header';
+import work from '../../data/Timeline.json'
 
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      externalMutations: undefined,
+      filteredData: []
+    };
+  }
 
-function App() {
+  removeMutation() {
+    this.setState({
+      externalMutations: undefined
+    });
+  }
 
-  return (
-    // make a side panel container (with react js file) and a main container
-    <Container className="AppContainer" fluid>
-      <Row className="Header">
-        <Col><Header /></Col>
-      </Row>
-      <Row className="Canvas">
-        {/* <Col md={3} id="sidePanel">
-          <SidePanel />
-        </Col> */}
-        <Col id="canvas">
-          <Canvas />
-        </Col>
-        <Col id="sidePanel">
-          <SidePanel />
-        </Col>
-      </Row>
-    </Container>
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload EDITSSSSS woah.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  );
+  filterData() {
+    this.setState({
+      externalMutations: [
+        {
+          childName: ["workTimeline", "eduTimeline"],
+          target: ["data"],
+          eventKey: "all",
+          mutation: () => ({ style: undefined }),
+          callback: this.removeMutation.bind(this)
+        }
+      ]
+    });
+  }
+
+  render() {
+    return (
+      <Container className="AppContainer" fluid>
+        <Row className="Header">
+          <Col><Header /></Col>
+        </Row>
+        <Row className="Canvas">
+          <Col id="canvas">
+            <Canvas data={this.state.filteredData} />
+          </Col>
+          <Col id="sidePanel">
+            <SidePanel />
+          </Col>
+        </Row>
+      </Container>
+    )
+  }
 }
 
 export default App;
+// ReactDOM.render(<App/>, mountNode)

@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Canvas.scss';
 import Timeline from '../charts/Timeline';
+import Responsibilities from '../charts/Responsibilities';
+import TechStack from '../charts/TechStack';
 import Header from './Header';
 import Summary from './Summary';
 import Education from './Education';
@@ -20,6 +22,10 @@ function Canvas() {
       </Row> */}
       <Row className="Timeline" id="Summary">
         <Col><Timeline /></Col>
+      </Row>
+      <Row className="RolesAndSkills">
+        <Col><Responsibilities /></Col>
+        <Col><TechStack /></Col>
       </Row>
       {/* <Row className="Education" id="Education">
         <Col><Education /></Col>

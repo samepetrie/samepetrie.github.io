@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTooltip, VictoryLegend, VictoryVoronoiContainer, VictoryLabel } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryTooltip, VictoryLegend, VictoryVoronoiContainer, VictoryLabel, Bar } from 'victory';
 import './Timeline.scss';
 import work from '../../data/Timeline.json'
 
@@ -63,6 +63,7 @@ const Timeline = () => (
             }
           />
           <VictoryBar
+            name = "workTimeline"
             scale={{ x: "linear", y: "time" }}
             horizontal
             domain={{ y: [new Date(2014, 1, 1), new Date(2020, 1, 1)], x: [0, 3.5] }}
@@ -72,7 +73,7 @@ const Timeline = () => (
                 fill: "#006D77"
               }, 
               labels: {
-                fontSize: 12,
+                fontSize: 14,
                 fill: "#393D3F",
                 fontFamily: "inherit"
               }
@@ -93,6 +94,7 @@ const Timeline = () => (
             }
           />
           <VictoryBar
+            name="eduTimeline"
             domain={{ y: [new Date(2014, 1, 1), new Date(2020, 1, 1)] }}
             scale={{x: "linear", y: "time"}}
             style={{ 
@@ -100,7 +102,7 @@ const Timeline = () => (
                 fill: "#83C5BE"
               },
               labels: {
-                fontSize: 12,
+                fontSize: 14,
                 fill: "#393D3F",
                 fontFamily: "inherit"
               }
