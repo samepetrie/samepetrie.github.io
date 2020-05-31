@@ -1,0 +1,5 @@
+[
+    {
+        "tech": [{"x": "Summary", "y": 0.3, "label": "Java"}, {"x": "Summary", "y": 0.3, "label": "SQL"}, {"x": "Summary", "y": 0.2, "label": "Tableau"}, {"x": "Summary", "y": 0.2, "label": "Python"}]
+    }
+]

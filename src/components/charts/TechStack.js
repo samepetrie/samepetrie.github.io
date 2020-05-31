@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { VictoryStack, VictoryChart, VictoryBar, VictoryTooltip, VictoryLegend, VictoryVoronoiContainer, VictoryLabel } from 'victory';
+import { VictoryStack, VictoryChart, VictoryBar, VictoryTooltip, VictoryVoronoiContainer, VictoryAxis, VictoryLabel } from 'victory';
 import work from '../../data/Timeline.json'
+import summary from '../../data/Summary.json'
 
-// X Values should be constant...labels are the name of the technology
-// for each item in tech list, make a VictoryBar object of it
-// maybe take average of the various tech used for the roles for a summary value
+// have prop from canvas if timeline is filtered to a role, then pass this as "work" data
+// if there is no filter, show summary
+// TODO: change labels to include the percentage in front of the name of the technology
 
-const tech = [{"x":1, "y": 0.6, "label": "Javascript"}];
-const tech1 = [{"x":1, "y": 0.3, "label": "Excel"}];
-const tech2 = [{"x": 1, "y": 0.1, "label": "PHP"}];
+const colors = ["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"];
 
 export default class TechStack extends Component {
     render(){
@@ -17,21 +16,59 @@ export default class TechStack extends Component {
                 <Row>
                     <Col>
                         <VictoryChart 
-                        containerComponent={<VictoryVoronoiContainer radius = {2}/>}
-                        style={{
-                            parent: {
-                            background: "#FFFFFF",
-                            borderRadius: "6px"
-                            }
-                        }}
-                        width={500}
+                            containerComponent={<VictoryVoronoiContainer radius = {2}/>}
+                            style={{
+                                parent: {
+                                background: "#FFFFFF",
+                                borderRadius: "6px"
+                                }
+                            }}
+                            width={500}
                         >
+                        <VictoryLabel 
+                            text="Tech Stack" 
+                            x={30} 
+                            y={30} 
+                            textAnchor="left" 
+                            style={{ 
+                                fontSize: 20,
+                                fill: "#393D3F",
+                                fontFamily: "inherit"
+                            }}
+                        />
+                        {/* <VictoryAxis style={{ 
+                            axis: {stroke: "transparent"}, 
+                            ticks: {stroke: "transparent"},
+                            tickLabels: { fill:"transparent"} 
+                            }} 
+                        /> */}
+                        <VictoryAxis />
                             <VictoryStack
-                            colorScale={["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"]}
+                                domainPadding={{x: [0, 0], y: 10}}
+                            // colorScale={["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"]}
                             >
-                                {work.map(item => (
+                                {summary.map(item => (
                                         item.tech.map((entry, index) => (
-                                            <VictoryBar data={item.tech.slice(index, index + 1)} />
+                                            <VictoryBar 
+                                            barWidth={120}
+                                            data={item.tech.slice(index, index + 1)} 
+                                            style={{
+                                                data: {
+                                                    fill: colors[index]
+                                                },
+                                                labels: {
+                                                    fontSize: 16
+                                                }
+                                            }}
+                                            labelComponent={ 
+                                                <VictoryTooltip 
+                                                  dx={100}
+                                                  constrainToVisibleArea
+                                                  orientation="bottom" 
+                                                //   pointerLength={0}
+                                                  flyoutStyle={{ fill: "transparent", stroke: "transparent"}}
+                                                /> }
+                                             />
                                         ))
                                 ))}
                             </VictoryStack>
