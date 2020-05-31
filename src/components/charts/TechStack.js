@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { VictoryStack, VictoryChart, VictoryBar, VictoryArea, VictoryTooltip, VictoryVoronoiContainer, VictoryAxis, VictoryLabel } from 'victory';
+import { VictoryStack, VictoryChart, VictoryBar, VictoryVoronoiContainer, VictoryAxis, VictoryLabel } from 'victory';
 import work from '../../data/Timeline.json'
 import summary from '../../data/Summary.json'
 
