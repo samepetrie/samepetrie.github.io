@@ -1,4 +1,5 @@
 {
+  "homepage": "http://samepetrie.github.io/visual-resume",
   "name": "visual-resume",
   "version": "0.1.0",
   "private": true,
@@ -37,7 +38,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "flow": "flow"
+    "flow": "flow",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -69,6 +72,7 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
-    "@storybook/react": "^5.3.18"
+    "@storybook/react": "^5.3.18",
+    "gh-pages": "^3.0.0"
   }
 }
