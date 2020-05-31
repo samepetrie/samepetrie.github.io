@@ -64,7 +64,7 @@ export default class TechStack extends Component {
                                             //     flyoutStyle={{ fill: "transparent", stroke: "transparent"}}
                                             // /> 
                                             <VictoryLabel 
-                                                dx={80} 
+                                                dx={75} 
                                                 dy={20}
                                                 textAnchor="left"
                                                 verticalAnchor="middle"

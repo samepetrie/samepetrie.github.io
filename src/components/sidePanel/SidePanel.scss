@@ -39,13 +39,14 @@
 .titles h1 {
   font-size: 34px;
   font-weight: bold;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #f4f4f9;
 }
 
 .titles h5 {
   padding-top: 10px;
   padding-bottom: 15px;
+  font-family: 'Quicksand', sans-serif;
   color: #79A1B9;
 }
 
@@ -54,6 +55,7 @@
   margin: 0px 10px 75px 10px;
   height: 100%;
   justify-content: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .details p {
@@ -72,6 +74,8 @@
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
   -webkit-transition: background-color .4s ease;
   -moz-transition: background-color .4s ease;
   -o-transition: background-color .4s ease;
@@ -79,7 +83,6 @@
 }
 
 #detailContact a {
-  font-weight: bold;
   color: white;
   -webkit-transition: background-color .4s ease;
   -moz-transition: background-color .4s ease;
