@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { VictoryStack, VictoryChart, VictoryBar, VictoryTooltip, VictoryVoronoiContainer, VictoryAxis, VictoryLabel } from 'victory';
+import { VictoryStack, VictoryChart, VictoryBar, VictoryArea, VictoryTooltip, VictoryVoronoiContainer, VictoryAxis, VictoryLabel } from 'victory';
 import work from '../../data/Timeline.json'
 import summary from '../../data/Summary.json'
 
@@ -36,40 +36,40 @@ export default class TechStack extends Component {
                                 fontFamily: "inherit"
                             }}
                         />
-                        {/* <VictoryAxis style={{ 
-                            axis: {stroke: "transparent"}, 
-                            ticks: {stroke: "transparent"},
-                            tickLabels: { fill:"transparent"} 
-                            }} 
-                        /> */}
                         <VictoryAxis />
                             <VictoryStack
                                 domainPadding={{x: [0, 0], y: 10}}
-                            // colorScale={["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"]}
                             >
                                 {summary.map(item => (
-                                        item.tech.map((entry, index) => (
-                                            <VictoryBar 
-                                            barWidth={120}
-                                            data={item.tech.slice(index, index + 1)} 
-                                            style={{
-                                                data: {
-                                                    fill: colors[index]
-                                                },
-                                                labels: {
-                                                    fontSize: 16
-                                                }
-                                            }}
-                                            labelComponent={ 
-                                                <VictoryTooltip 
-                                                  dx={100}
-                                                  constrainToVisibleArea
-                                                  orientation="bottom" 
-                                                //   pointerLength={0}
-                                                  flyoutStyle={{ fill: "transparent", stroke: "transparent"}}
-                                                /> }
-                                             />
-                                        ))
+                                    item.tech.map((entry, index) => (
+                                        <VictoryBar 
+                                        barWidth={120}
+                                        data={item.tech.slice(index, index + 1)} 
+                                        style={{
+                                            data: {
+                                                fill: colors[index]
+                                            },
+                                            labels: {
+                                                fontSize: 16
+                                            }
+                                        }}
+                                        labelComponent={ 
+                                            // <VictoryTooltip 
+                                            //     dx={100}
+                                            //     constrainToVisibleArea
+                                            //     orientation="bottom" 
+                                            // //   pointerLength={0}
+                                            //     flyoutStyle={{ fill: "transparent", stroke: "transparent"}}
+                                            // /> 
+                                            <VictoryLabel 
+                                                dx={80} 
+                                                dy={20}
+                                                textAnchor="left"
+                                                verticalAnchor="middle"
+                                            />
+                                        }
+                                            />
+                                    ))
                                 ))}
                             </VictoryStack>
                         </VictoryChart>
