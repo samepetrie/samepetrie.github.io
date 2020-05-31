@@ -29,7 +29,8 @@ export default class Archetypes extends Component {
                             style={{ 
                                 fontSize: 20,
                                 fill: "#393D3F",
-                                fontFamily: "inherit"
+                                fontFamily: "Quicksand",
+                                fontWeight: "bold"
                             }}
                         />
                         <VictoryAxis style={{ 
@@ -43,6 +44,12 @@ export default class Archetypes extends Component {
                                 innerRadius={60} 
                                 data={item.archetypes} 
                                 colorScale={colors}
+                                style={{
+                                    labels: {
+                                        fontSize: 14,
+                                        fontFamily: "Quicksand"
+                                    }
+                                }}
                             />
                         ))}
                     </VictoryChart>

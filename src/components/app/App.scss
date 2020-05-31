@@ -5,21 +5,27 @@
 }
 
 .Canvas {
-  height: 92%;
+  height: 88%;
   background-color: #F4F4F9;
+  margin-top: 3px;
 }
 
 .Header {
   top: 0;
-  height: 8%;
+  height: 12%;
   // position: fixed;
   background-color: #79A1B9;
   z-index: 1;
   align-items: center;
   color: #393D3F;
   cursor: default;
-  // border-bottom: 10px solid black;
+  border-bottom: 10px solid #393D3F;
   // box-shadow: 0px 4px 5px black;
+}
+
+.Header .col {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #sidePanel {

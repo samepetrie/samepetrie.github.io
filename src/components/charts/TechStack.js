@@ -6,7 +6,7 @@ import summary from '../../data/Summary.json'
 
 // have prop from canvas if timeline is filtered to a role, then pass this as "work" data
 // if there is no filter, show summary
-// TODO: change labels to include the percentage in front of the name of the technology
+// TODO: change font family of axis
 
 const colors = ["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"];
 
@@ -33,7 +33,8 @@ export default class TechStack extends Component {
                             style={{ 
                                 fontSize: 20,
                                 fill: "#393D3F",
-                                fontFamily: "inherit"
+                                fontFamily: "Quicksand",
+                                fontWeight: "bold"
                             }}
                         />
                         <VictoryAxis />
@@ -50,7 +51,8 @@ export default class TechStack extends Component {
                                                 fill: colors[index]
                                             },
                                             labels: {
-                                                fontSize: 16
+                                                fontSize: 14,
+                                                fontFamily: "Quicksand"
                                             }
                                         }}
                                         labelComponent={ 

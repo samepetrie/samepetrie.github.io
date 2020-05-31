@@ -34,6 +34,18 @@ const Timeline = () => (
           }}
           width={1000}
           >
+            <VictoryLabel 
+              text="Timeline" 
+              x={30} 
+              y={30} 
+              textAnchor="left" 
+              style={{ 
+                  fontSize: 20,
+                  fill: "#393D3F",
+                  fontFamily: "Quicksand",
+                  fontWeight: "bold"
+              }}
+            />
           <VictoryLegend x={800} y={15}
             orientation="horizontal"
             gutter={20}
@@ -75,7 +87,7 @@ const Timeline = () => (
               labels: {
                 fontSize: 14,
                 fill: "#393D3F",
-                fontFamily: "inherit"
+                fontFamily: "Quicksand"
               }
             }}
             barWidth={15}
@@ -104,7 +116,7 @@ const Timeline = () => (
               labels: {
                 fontSize: 14,
                 fill: "#393D3F",
-                fontFamily: "inherit"
+                fontFamily: "Quicksand"
               }
             }}
             horizontal
