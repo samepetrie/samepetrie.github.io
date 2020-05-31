@@ -1,0 +1,6 @@
+[
+    {
+        "tech": [{"x": "Summary", "y": 0.3, "label": "Java"}, {"x": "Summary", "y": 0.3, "label": "SQL"}, {"x": "Summary", "y": 0.2, "label": "Tableau"}, {"x": "Summary", "y": 0.2, "label": "Python"}],
+        "archetypes": [{"x": "Data Analyst", "y": 0.4}, {"x": "Product Manager", "y": 0.3}, {"x": "Business Analyst", "y": 0.2}, {"x": "Software Developer", "y": 0.1}]
+    }
+]

@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "category": 2,
+    "role": "Full Stack Web Devloper",
+    "org": "Renaissance Computing Institute",
+    "tech": [{"x":1, "y": 0.4, "label": "Javascript"}, {"x": 1, "y": 0.3, "label": "Excel"}, {"x": 1, "y": 0.2, "label": "SQL"}, {"x": 1, "y": 0.1, "label": "PHP"}],
+    "start_date": "2015-09-21",
+    "end_date": "2018-05-31"
+  },
+  {
+    "id": 2,
+    "category": 1.5,
+    "role": "Product Management Intern",
+    "org": "Premier, Inc.",
+    "tech": [{"x":2, "y": 0.7, "label": "Tableau"}, {"x": 2, "y": 0.2, "label": "Apache Drill"}, {"x": 2, "y": 0.1, "label": "SQL"}],
+    "start_date": "2016-05-10",
+    "end_date": "2016-08-10"
+  },
+  {
+    "id": 3,
+    "category": 1.5,
+    "role": "Data Visualization and Analytics Intern",
+    "org": "Visa",
+    "tech": [{"x":3, "y": 0.6, "label": "Tableau"}, {"x": 3, "y": 0.4, "label": "Illustrator"}],
+    "start_date": "2017-05-10",
+    "end_date": "2017-08-10"
+  },
+  {
+    "id": 4,
+    "category": 1,
+    "role": "Entrepreneurship Leadership Research and Teaching Assistant",
+    "org": "Entrepreneurship Center at Kenan-Flagler Business School",
+    "tech": [{"x":4, "y": 0.8, "label": "Tableau"}, {"x": 4, "y": 0.2, "label": "Excel"}],
+    "start_date": "2017-01-01",
+    "end_date": "2018-06-21"
+  },
+  {
+    "id": 5,
+    "category": 2,
+    "role": "Associate Business Analyst",
+    "org": "Premier, Inc.",
+    "tech": [{"x":5, "y": 0.5, "label": "Java"}, 
+              {"x": 5, "y": 0.2, "label": "MySQL"}, 
+              {"x": 5, "y":0.1, "label": "Python"}, 
+              {"x": 5, "y": 0.1, "label": "Apache Spark"}, 
+              {"x": 5, "y": 0.1, "label": "Druid"}],
+    "start_date": "2018-07-09",
+    "end_date": "2020-01-03"
+  },
+  {
+    "id": 6,
+    "category": 2,
+    "role": "Product Implementation Manager",
+    "org": "LeanTaaS",
+    "tech": [{"x":6, "y": 0.6, "label": "SQL"}, {"x": 6, "y": 0.2, "label": "Python"}, {"x": 6, "y": 0.2, "label": "Amazon Quicksight"}],
+    "start_date": "2020-01-06",
+    "end_date": "2020-04-17"
+  }
+]
