@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTooltip, VictoryLegend, VictoryVoronoiContainer, VictoryLabel, Bar } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryTooltip, VictoryLegend, VictoryVoronoiContainer, VictoryLabel } from 'victory';
 import './Timeline.scss';
 import work from '../../data/Timeline.json'
 
@@ -38,7 +38,7 @@ const Timeline = () => (
               text="Timeline" 
               x={30} 
               y={30} 
-              textAnchor="left" 
+              textAnchor="start" 
               style={{ 
                   fontSize: 20,
                   fill: "#393D3F",

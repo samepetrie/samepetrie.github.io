@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { VictoryPie, VictoryChart, VictoryAxis, VictoryTooltip, VictoryLegend, VictoryVoronoiContainer, VictoryLabel } from 'victory';
-import work from '../../data/Timeline.json'
+import { VictoryPie, VictoryChart, VictoryAxis, VictoryVoronoiContainer, VictoryLabel } from 'victory';
 import summary from '../../data/Summary.json'
 
 const colors = ["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"];
@@ -25,7 +24,7 @@ export default class Archetypes extends Component {
                             text="Archetypes" 
                             x={30} 
                             y={30} 
-                            textAnchor="left" 
+                            textAnchor="start" 
                             style={{ 
                                 fontSize: 20,
                                 fill: "#393D3F",
