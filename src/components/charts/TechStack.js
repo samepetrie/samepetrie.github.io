@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { VictoryStack, VictoryChart, VictoryBar, VictoryVoronoiContainer, VictoryAxis, VictoryLabel } from 'victory';
-import work from '../../data/Timeline.json'
 import summary from '../../data/Summary.json'
 
 // have prop from canvas if timeline is filtered to a role, then pass this as "work" data
@@ -29,7 +28,7 @@ export default class TechStack extends Component {
                             text="Tech Stack" 
                             x={30} 
                             y={30} 
-                            textAnchor="left" 
+                            textAnchor="start" 
                             style={{ 
                                 fontSize: 20,
                                 fill: "#393D3F",
@@ -56,17 +55,10 @@ export default class TechStack extends Component {
                                             }
                                         }}
                                         labelComponent={ 
-                                            // <VictoryTooltip 
-                                            //     dx={100}
-                                            //     constrainToVisibleArea
-                                            //     orientation="bottom" 
-                                            // //   pointerLength={0}
-                                            //     flyoutStyle={{ fill: "transparent", stroke: "transparent"}}
-                                            // /> 
                                             <VictoryLabel 
                                                 dx={75} 
                                                 dy={20}
-                                                textAnchor="left"
+                                                textAnchor="start"
                                                 verticalAnchor="middle"
                                             />
                                         }
