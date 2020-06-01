@@ -18,7 +18,7 @@ const SidePanel = () => (
         </Col>
       </Row>
       <Row className="justify-content-md-center align-middle">
-        <Col md="auto"><button id="detailContact">Contact Sam</button></Col>
+        <Col md="auto"><button id="detailContact"><a href="mailto:hello@samepetrie.com">Contact Sam</a></button></Col>
       </Row>
   </Container>
 )
