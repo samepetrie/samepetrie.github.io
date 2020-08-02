@@ -66,7 +66,8 @@ const Timeline = () => (
                 new Date(2017, 1, 1), 
                 new Date(2018, 1, 1),
                 new Date(2019, 1, 1),
-                new Date(2020, 1, 1)
+                new Date(2020, 1, 1),
+                new Date(2021, 1, 1)
               ]
             }
             tickFormat={
@@ -78,7 +79,7 @@ const Timeline = () => (
             name = "workTimeline"
             scale={{ x: "linear", y: "time" }}
             horizontal
-            domain={{ y: [new Date(2014, 1, 1), new Date(2020, 1, 1)], x: [0, 3.5] }}
+            domain={{ y: [new Date(2014, 1, 1), new Date(2021, 1, 1)], x: [0, 3.5] }}
             data={work}
             style={{ 
               data: { 
@@ -104,10 +105,26 @@ const Timeline = () => (
                 flyoutStyle={{ fill: "#F4F4F9", stroke: "#006D77"}}
               /> 
             }
+            events={[
+              {
+                target: "data",
+                eventHandlers: {
+                  onMouseOver: () => {
+                    return [{
+                      target: "labels",
+                      mutation: (props) => {
+                        return props.text === "clicked" ?
+                          null : { text: "clicked" }
+                      }
+                    }];
+                  }
+                }
+              }
+            ]}
           />
           <VictoryBar
             name="eduTimeline"
-            domain={{ y: [new Date(2014, 1, 1), new Date(2020, 1, 1)] }}
+            domain={{ y: [new Date(2014, 1, 1), new Date(2021, 1, 1)] }}
             scale={{x: "linear", y: "time"}}
             style={{ 
               data: { 

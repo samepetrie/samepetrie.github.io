@@ -55,6 +55,25 @@
   padding: 0px;
 }
 
-// #sidePanel:hover {
-//   width: 15%;
-// }
+.RolesAndSkills {
+  margin-top: 50px;
+}
+
+.Section {
+  align-items: center;
+  padding: 10px;
+}
+
+.Divider {
+  background-color: #79A1B9;
+  height: 4px;
+  float: right;
+  width: 95%;
+  border-radius: 10px;
+}
+
+#sectionTitle {
+  font-size: 45px;
+  font-weight: lighter;
+  color: #393D3F;
+}
