@@ -2,6 +2,7 @@
   {
     "id": 1,
     "category": 2,
+    "fill": "#006D77",
     "role": "Full Stack Web Devloper",
     "org": "Renaissance Computing Institute",
     "description": "Lead web developer for redesign and migration of University of North Carolina Medical School Core Facilities website to Wordpress.",
@@ -12,6 +13,7 @@
   {
     "id": 2,
     "category": 1.5,
+    "fill": "#006D77",
     "role": "Product Management Intern",
     "org": "Premier, Inc.",
     "description": "Executed all roles in the SDLC following Agile methodologies to complete project roadmap 3 weeks early, allowing for further automation that reduced implementation time by 60%.",
@@ -22,6 +24,7 @@
   {
     "id": 3,
     "category": 1.5,
+    "fill": "#006D77",
     "role": "Data Visualization and Analytics Intern",
     "org": "Visa",
     "description": "Crafted the FY17 Employee Engagement Report utilizing Tableau and Illustrator, presenting progress and suggesting improvement opportunities to senior leadership to help guide employee engagement strategy for the 500+ employees in Cybersecurity.",
@@ -32,6 +35,7 @@
   {
     "id": 4,
     "category": 1,
+    "fill": "#006D77",
     "role": "Research and Teaching Assistant",
     "org": "Entrepreneurship Center at Kenan-Flagler Business School",
     "description": "Launched the Entrepreneur's Genome Project with Dr. Ted Zoller to analyze professional and academic journeys of entrepreneurs in Tableau and Excel and incorporate success models into course curriculum to expedite breakout career moments for entrepreneurial students.",
@@ -42,6 +46,7 @@
   {
     "id": 5,
     "category": 2,
+    "fill": "#006D77",
     "role": "Associate Business Analyst",
     "org": "Premier, Inc.",
     "description": "Guided a team of 5 engineers following Agile development methodologies on a project to rearchitect our data ingestion pipeline and reduce product implementation time, cutting data validation time by 98% and expanding analytical capabilities to include 10x more data sources.",
@@ -56,6 +61,7 @@
   {
     "id": 6,
     "category": 2,
+    "fill": "#006D77",
     "role": "Product Implementation Manager",
     "org": "LeanTaaS",
     "description": "Developed analyses using SQL, Python, and Amazon Quicksight to proactively resolve any data configuration errors for our customers.",
@@ -66,11 +72,22 @@
   {
     "id": 7,
     "category": 2,
+    "fill": "#006D77",
     "role": "Product Manager",
     "org": "Novant Health",
     "description": "Initiated the use of Azure DevOps to lead the development efforts of the Cognitive Computing team so that we could leverage Agile methodologies to concurrently develop 8 predicitve models.",
     "tech": [{"x":7, "y": 0.4, "label": "Azure DevOps"}, {"x": 7, "y": 0.3, "label": "Python"}, {"x": 7, "y": 0.2, "label": "PowerBI"}, {"x": 7, "y": 0.1, "label": "Databricks"}],
     "start_date": "2020-06-22",
     "end_date": "2020-12-11"
+  },
+  {
+    "id": 8,
+    "category": 3,
+    "fill": "#83C5BE",
+    "role": "B.S. Computer Science",
+    "org": "University of North Carolina - Chapel Hill",
+    "description": "I found my passion for entrepreneurship and product innovation here. After being selected for the Adams Apprenticeship program, an elite year-long fellowship for the top student entrepreneurs at UNC, I went on to do entrepreneurial leadership research for Kenan-Flagler Business School, join the executive board of our Makerspace, and become a two-time TA for the business school's most exclusive entrepreneurship seminar. Rounding out my time at UNC, I double-minored in Statistics & Analytics and Entrepreneurship, was President of UNC's chapter of Timmy Global Health, and cheered for the Tar Heels every chance I got.",
+    "start_date": "2014, 6, 14",
+    "end_date": "2018, 5, 13"
   }
 ]

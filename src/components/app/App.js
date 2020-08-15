@@ -10,27 +10,27 @@ import Archetypes from '../charts/Archetypes';
 import TechStack from '../charts/TechStack';
 import '../charts/Timeline.scss';
 
-const edu = [{
-  "category": 3,
-  "role": "B.S. Computer Science",
-  "org": "University of North Carolina - Chapel Hill",
-  "description": "I found my passion for entrepreneurship and product innovation here. After being selected for the Adams Apprenticeship program, an elite year-long fellowship for the top student entrepreneurs at UNC, I went on to do entrepreneurial leadership research for Kenan-Flagler Business School, join the executive board of our Makerspace, and become a two-time TA for the business school's most exclusive entrepreneurship seminar. Rounding out my time at UNC, I double-minored in Statistics & Analytics and Entrepreneurship, was President of UNC's chapter of Timmy Global Health, and cheered for the Tar Heels every chance I got.",
-  "start_date": new Date(2014, 6, 14),
-  "end_date": new Date(2018, 5, 13)
-}]
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.clicked = this.updateClicked.bind(this);
     this.state = {
-      filteredData: {}
+      filteredData: {},
+      externalMutations: undefined
     };
   }
 
-  updateClicked(datum) {
+  updateClicked(datum, index) {
     this.setState({
-      filteredData: datum
+      filteredData: datum,
+      externalMutations: [
+        {
+          childName: "timeline",
+          target: ["data"],
+          eventKey: index.toString(),
+          mutation: () => ({style: {fill: "#FFDDD2", stroke:"#393D3F"}})
+        }
+      ]
     });
   }
 
@@ -52,7 +52,8 @@ class App extends Component {
                           containerComponent={
                             <VictoryVoronoiContainer 
                               radius = {2} 
-                            />}
+                            />
+                          }
                           style={{
                             parent: {
                               background: "#FFFFFF",
@@ -60,6 +61,27 @@ class App extends Component {
                             }
                           }}
                           width={1000}
+                          externalEventMutations={this.state.externalMutations}
+                          events={[
+                            {
+                              target: "data",
+                              childName: "timeline",
+                              eventHandlers: {
+                                onClick: (event, data) => {
+                                  this.clicked(data.datum, data.index);
+                                  return [
+                                    {
+                                      target: "data",
+                                      eventKey: "all",
+                                      mutation: (props) => {
+                                        return props.datum.index === this ? {style: {fill:"#FFDDD2"}} : {style: undefined}
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]}
                           >
                             <VictoryLabel 
                               text="Timeline" 
@@ -103,14 +125,14 @@ class App extends Component {
                             }
                           />
                           <VictoryBar
-                            name = "workTimeline"
+                            name = "timeline"
                             scale={{ x: "linear", y: "time" }}
                             horizontal
                             domain={{ y: [new Date(2014, 1, 1), new Date(2021, 1, 1)], x: [0, 3.5] }}
                             data={work}
                             style={{ 
                               data: { 
-                                fill: "#006D77"
+                                fill: ({ datum }) => datum.fill
                               }, 
                               labels: {
                                 fontSize: 14,
@@ -132,53 +154,6 @@ class App extends Component {
                                 flyoutStyle={{ fill: "#F4F4F9", stroke: "#006D77"}}
                               /> 
                             }
-                            events={[
-                              {
-                                target: "data",
-                                eventHandlers: {
-                                  onClick: (event, data) => this.clicked(data.datum)
-                                }
-                              }
-                            ]}
-                          />
-                          <VictoryBar
-                            name="eduTimeline"
-                            domain={{ y: [new Date(2014, 1, 1), new Date(2021, 1, 1)] }}
-                            scale={{x: "linear", y: "time"}}
-                            style={{ 
-                              data: { 
-                                fill: "#83C5BE"
-                              },
-                              labels: {
-                                fontSize: 14,
-                                fill: "#393D3F",
-                                fontFamily: "Quicksand"
-                              }
-                            }}
-                            horizontal
-                            data={edu}
-                            barWidth={15}
-                            x="category"
-                            y="start_date"
-                            y0="end_date"
-                            labels={({ datum }) => `${datum.role} \n ${datum.org}`}
-                            labelComponent={ 
-                              <VictoryTooltip 
-                                dy={15} 
-                                constrainToVisibleArea
-                                orientation="bottom" 
-                                pointerLength={0}
-                                flyoutStyle={{ fill: "#F4F4F9", stroke: "#83C5BE"}}
-                              />  
-                            }
-                            events={[
-                              {
-                                target: "data",
-                                eventHandlers: {
-                                  onClick: (event, data) => this.clicked(data.datum)
-                                }
-                              }
-                            ]}
                           />
                         </VictoryChart>
                       </Col>
