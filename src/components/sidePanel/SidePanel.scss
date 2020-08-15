@@ -15,17 +15,23 @@
   margin-bottom: 5px;
 }
 
-.titles h5 {
+#location {
   padding-top: 10px;
-  padding-bottom: 15px;
   font-family: 'Quicksand', sans-serif;
   color: #79A1B9;
 }
 
+#duration {
+  padding-bottom: 15px;
+  font-family: 'Quicksand', sans-serif;
+  color:#79A1B9;
+}
+
 .details {
   padding: 10px;
-  margin: 0px 10px 75px 10px;
-  height: 100%;
+  margin: 0px 10px 10px 10px;
+  height: 400px;
+  overflow: auto;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
 }
