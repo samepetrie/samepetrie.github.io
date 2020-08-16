@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { VictoryPie, VictoryChart, VictoryAxis, VictoryVoronoiContainer, VictoryLabel } from 'victory';
-import summary from '../../data/Summary.json'
 
 const colors = ["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"];
 
-export default class Archetypes extends Component {
+const summary = [{"x": "Data Analyst", "y": 0.4}, {"x": "Product Manager", "y": 0.3}, {"x": "Business Analyst", "y": 0.2}, {"x": "Software Developer", "y": 0.1}];
+
+class Archetypes extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          filteredData: summary
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.data.archetypes){
+              this.setState({filteredData: nextProps.data.archetypes})
+          } else {
+              this.setState({filteredData: summary});
+          }
+    }
+
     render(){ 
         return <Container fluid>
             <Row>
@@ -38,22 +54,22 @@ export default class Archetypes extends Component {
                             tickLabels: { fill:"transparent"} 
                             }} 
                         />
-                        {summary.map(item => (
-                            <VictoryPie 
-                                innerRadius={60} 
-                                data={item.archetypes} 
-                                colorScale={colors}
-                                style={{
-                                    labels: {
-                                        fontSize: 14,
-                                        fontFamily: "Quicksand"
-                                    }
-                                }}
-                            />
-                        ))}
+                        <VictoryPie 
+                            innerRadius={60} 
+                            data={this.state.filteredData} 
+                            colorScale={colors}
+                            style={{
+                                labels: {
+                                    fontSize: 14,
+                                    fontFamily: "Quicksand"
+                                }
+                            }}
+                        />
                     </VictoryChart>
                 </Col>
             </Row>
         </Container>
     }
 }
+
+export default Archetypes
