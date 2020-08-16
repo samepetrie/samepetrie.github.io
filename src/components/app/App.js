@@ -163,7 +163,7 @@ class App extends Component {
               </Row>
               <Row className="RolesAndSkills">
                 <Col><Archetypes /></Col>
-                <Col><TechStack /></Col>
+                <Col><TechStack data={this.state.filteredData} /></Col>
               </Row>
             </Container>
             {/* <Canvas data={this.state.filteredData} /> */}

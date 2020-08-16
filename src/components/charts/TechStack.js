@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { VictoryStack, VictoryChart, VictoryBar, VictoryVoronoiContainer, VictoryAxis, VictoryLabel } from 'victory';
-import summary from '../../data/Summary.json'
 
-// have prop from canvas if timeline is filtered to a role, then pass this as "work" data
-// if there is no filter, show summary
 // TODO: change font family of axis
 
 const colors = ["#006D77", "#83C5BE", "#FFDDD2", "#79A1B9", "#393D3F"];
 
-export default class TechStack extends Component {
+const summary = [{"x": "Summary", "y": 0.3, "label": "Java"}, {"x": "Summary", "y": 0.3, "label": "SQL"}, {"x": "Summary", "y": 0.2, "label": "Tableau"}, {"x": "Summary", "y": 0.2, "label": "Python"}]
+
+class TechStack extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          filteredData: summary
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.data.tech){
+              this.setState({filteredData: nextProps.data.tech})
+          } else {
+              this.setState({filteredData: summary});
+          }
+    }
+
     render(){
         return <Container fluid>
                 <Row>
@@ -40,11 +54,10 @@ export default class TechStack extends Component {
                             <VictoryStack
                                 domainPadding={{x: [0, 0], y: 10}}
                             >
-                                {summary.map(item => (
-                                    item.tech.map((entry, index) => (
+                                {this.state.filteredData.map((entry, index) => (
                                         <VictoryBar 
                                         barWidth={120}
-                                        data={item.tech.slice(index, index + 1)} 
+                                        data={this.state.filteredData.slice(index, index + 1)} 
                                         style={{
                                             data: {
                                                 fill: colors[index]
@@ -64,7 +77,7 @@ export default class TechStack extends Component {
                                         }
                                             />
                                     ))
-                                ))}
+                                }
                             </VictoryStack>
                         </VictoryChart>
                     </Col>
@@ -72,3 +85,5 @@ export default class TechStack extends Component {
             </Container>
     }
 }
+
+export default TechStack
