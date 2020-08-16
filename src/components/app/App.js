@@ -162,7 +162,7 @@ class App extends Component {
                 </Col>
               </Row>
               <Row className="RolesAndSkills">
-                <Col><Archetypes /></Col>
+                <Col><Archetypes data={this.state.filteredData} /></Col>
                 <Col><TechStack data={this.state.filteredData} /></Col>
               </Row>
             </Container>
