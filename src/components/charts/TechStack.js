@@ -70,7 +70,7 @@ class TechStack extends Component {
                                         labelComponent={ 
                                             <VictoryLabel 
                                                 dx={75} 
-                                                dy={20}
+                                                dy={8}
                                                 textAnchor="start"
                                                 verticalAnchor="middle"
                                             />

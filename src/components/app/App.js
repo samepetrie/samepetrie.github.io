@@ -57,7 +57,8 @@ class App extends Component {
                           style={{
                             parent: {
                               background: "#FFFFFF",
-                              borderRadius: "6px"
+                              borderRadius: "6px",
+                              cursor: "pointer"
                             }
                           }}
                           width={1000}
